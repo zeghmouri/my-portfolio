@@ -13,7 +13,11 @@ export const LeftSection = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
-
     margin: 0 auto;
   }
+`;
+export const Image =styled.img`
+  border-radius: 50px;
+  position: absolute;
+  margin-top: -13px;
 `;

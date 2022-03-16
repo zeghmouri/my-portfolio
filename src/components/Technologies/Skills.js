@@ -1,19 +1,25 @@
-import { DiAndroid, DiTerminal } from "react-icons/di";
-import { SiJava, SiFirebase, SiGit } from "react-icons/si";
+import { DiReact, DiTerminal,DiDatabase } from "react-icons/di";
+import { SiJava, SiFirebase, SiGit, SiWordpress } from "react-icons/si";
 import { RiFlutterFill } from "react-icons/ri";
 
 export const Skills = [
   {
-    slug: "android",
-    Component: DiAndroid,
-    title: "Android",
-    Description: () => <>I work on ROMs, Kernels & Android Apps using Java.</>,
+    slug: "react",
+    Component: DiReact,
+    title: "ReactJs",
+    Description: () => <>.</>,
   },
   {
-    slug: "flutter",
-    Component: RiFlutterFill,
-    title: "Flutter",
-    Description: () => <>Currently working with Dart & Flutter for app development. </>,
+    slug: "wordpress",
+    Component: SiWordpress,
+    title: "WordPress",
+    Description: () => <>. </>,
+  },
+  {
+    slug: "databases",
+    Component: DiDatabase,
+    title: "Databases",
+    Description: () => <>Database manipulation.</>,
   },
   {
     slug: "java",
@@ -26,12 +32,6 @@ export const Skills = [
     Component: DiTerminal,
     title: "Scripting",
     Description: () => <>I have written dozens of Shell scripts for various purposes.</>,
-  },
-  {
-    slug: "firebase",
-    Component: SiFirebase,
-    title: "Firebase",
-    Description: () => <>I have used Firebase for auth, database & analytics in my apps.</>,
   },
   {
     slug: "git",
