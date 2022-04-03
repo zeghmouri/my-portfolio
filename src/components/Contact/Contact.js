@@ -9,7 +9,7 @@ export default function Contact() {
   const [message, setMessage] = useState('')
   const [submitted, setSubmitted] = useState(false)
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     console.log('Sending')
     let data = {
@@ -17,39 +17,40 @@ export default function Contact() {
         email,
         message
     }
-    fetch('/api/contact', {
+    const res = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Accept': 'application/json, text/plain, */*',
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(data)
-      }).then((res) => {
-        console.log('Response received')
+      })
+    
         if (res.status === 200) {
           console.log('Response succeeded!')
           setSubmitted(true)
           setName('')
           setEmail('')
-          setBody('')
+          setMessage('')
         }
-      })
+      
+      
   }
   return (
     <Section id="contact">
-      <SectionTitle main>Contact Me</SectionTitle>
+      <SectionTitle>Contact Me</SectionTitle>
     < form >
     < FormGroup>
       < label htmlFor='name'>Name</label>
-      < input type='text' name='name' onChange={(e)=>{setName(e.target.value)}}/>  
+      < input type='text' name='name' value={name} onChange={(e)=>{setName(e.target.value)}}/>  
     </FormGroup>
     < FormGroup >
       < label htmlFor='email'>Email</label>
-      < input type='email' name='email' onChange={(e)=>{setEmail(e.target.value)}}/>
+      < input type='email' name='email' value={email} onChange={(e)=>{setEmail(e.target.value)}}/>
     </FormGroup>
     < FormGroup >
       < label htmlFor='message'>Message</label>
-      < textarea type='text' name='message' onChange={(e)=>{setMessage(e.target.value)}}/>
+      < textarea type='text' name='message' value={message} onChange={(e)=>{setMessage(e.target.value)}}/>
     </FormGroup>
     < input type='submit' onClick={(e)=>{handleSubmit(e)}}/>
     </form >

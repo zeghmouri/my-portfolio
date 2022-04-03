@@ -1,6 +1,6 @@
 import Nodemailer from 'nodemailer'
 export default function (req, res) {
-  const transporter = Nodemailer.createTransport({
+    const transporter = Nodemailer.createTransport({
     port: 465,
     host: "smtp.gmail.com",
     auth: {
@@ -21,6 +21,7 @@ export default function (req, res) {
         console.log(err)
       else
         console.log(info)
-    })  
-    res.status(200)
-    }
+    })
+    res.status(200).json({})
+   
+   }
