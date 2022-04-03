@@ -10,6 +10,7 @@
   "dependencies": {
     "next": "10.2.3",
     "ngrok": "^4.0.1",
+    "nodemailer": "^6.7.3",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-icons": "^4.2.0",
