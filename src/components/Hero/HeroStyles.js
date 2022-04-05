@@ -16,8 +16,7 @@ export const LeftSection = styled.div`
     margin: 0 auto;
   }
 `;
-export const Image =styled.img`
-  border-radius: 50px;
+export const Avatar =styled.img`
   position: absolute;
   margin-top: -13px;
 `;

@@ -2,12 +2,13 @@ import React from 'react';
 import { Section, SectionText, SectionTitle, Link, avatarImg } from '../../styles/GlobalComponents';
 import Button from '../../styles/GlobalComponents/Button';
 import { LeftSection , Image} from './HeroStyles';
+import Avatar from '@mui/material/Avatar';
 const Hero = (props) => (
   <>
     <Section row nopadding>
       <LeftSection>
         <SectionTitle main center>
-          <Image src="/images/mypic.jpeg" width={100} height={100} alt="avatar"/>
+        <Avatar alt="my-avatar" src="/images/mypic.jpeg" sx={{ width: 100, height: 100 }}/>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hey there,
         </SectionTitle>
         <SectionText>
