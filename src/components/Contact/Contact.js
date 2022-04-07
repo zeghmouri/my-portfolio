@@ -1,6 +1,8 @@
 import {React, useState} from 'react'
-import { FormGroup } from './ContactStyles'
+import Button from '../../styles/GlobalComponents/Button';
 import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
+import Box from '@mui/material/Box';
+import CustomTextField from './ContactStyles';
 
 
 export default function Contact() {
@@ -17,10 +19,10 @@ export default function Contact() {
         email,
         message
     }
-    const res = await fetch('/api/contact', {
+   /*const res = await fetch('/api/contact', {
         method: 'POST',
         headers: {
-          'Accept': 'application/json, text/plain, */*',
+          'Accept': 'application/json, text/plain, **',
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(data)
@@ -32,28 +34,54 @@ export default function Contact() {
           setName('')
           setEmail('')
           setMessage('')
-        }
-      
+        }*/
+        setName('')
+        setEmail('')
+        setMessage('')
       
   }
   return (
     <Section id="contact">
       <SectionTitle>Contact Me</SectionTitle>
-    < form >
-    < FormGroup>
-      < label htmlFor='name'>Name</label>
-      < input type='text' name='name' value={name} onChange={(e)=>{setName(e.target.value)}}/>  
-    </FormGroup>
-    < FormGroup >
-      < label htmlFor='email'>Email</label>
-      < input type='email' name='email' value={email} onChange={(e)=>{setEmail(e.target.value)}}/>
-    </FormGroup>
-    < FormGroup >
-      < label htmlFor='message'>Message</label>
-      < textarea type='text' name='message' value={message} onChange={(e)=>{setMessage(e.target.value)}}/>
-    </FormGroup>
-    < input type='submit' onClick={(e)=>{handleSubmit(e)}}/>
-    </form >
+      <Box
+      component="form"
+      sx={{
+        '& .MuiTextField-root': { m: 1, width: '25ch' },
+      }}
+      noValidate
+      autoComplete="off"
+    >
+          <CustomTextField
+          required
+          id="name"
+          label="Name"
+          helperText="Please enter your name"
+          value={name} 
+          type="text"
+          onChange={(e)=>{setName(e.target.value)}}
+        />
+      <CustomTextField
+          required
+          id="email"
+          label="Email"
+          helperText="Please enter your email"
+          value={email} 
+          type="email"
+          onChange={(e)=>{setEmail(e.target.value)}}
+        /><br/>
+      <CustomTextField
+          required
+          message
+          id="message"
+          label="Message"
+          helperText="Please write your message"
+          multiline
+          maxRows={4}
+          value={message}
+          onChange={(e)=>{setMessage(e.target.value)}}
+       />
+    <Button type='submit' onClick={(e)=>{handleSubmit(e)}}> Send message</Button>
+    </Box>
     <SectionDivider />
   </Section> 
   )
