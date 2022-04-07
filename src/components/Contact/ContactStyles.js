@@ -16,7 +16,10 @@ export const FormGroup = styled.section`
   }
 `
 const CustomTextField=styled(TextField)`
- 
+  
+   &&{ margin-bottom:${(props) => props.message ? '30px' : '8px'} }
+  
+
   & .MuiOutlinedInput-root {
     color: white;
     font-size:14px;
