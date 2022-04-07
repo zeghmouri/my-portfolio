@@ -29,6 +29,11 @@ const Header = () => (
         </Link>
       </li>
       <li>
+        <a href="#contact">
+          <NavLink>Contact Me</NavLink>
+        </a>
+      </li>
+      <li>
         <a href="/blog">
           <NavLink>Blog</NavLink>
         </a>
