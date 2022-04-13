@@ -1,4 +1,4 @@
-import {React, useState} from 'react'
+import {React, useState,useRef} from 'react'
 import Button from '../../styles/GlobalComponents/Button';
 import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
 import Box from '@mui/material/Box';
@@ -9,35 +9,37 @@ export default function Contact() {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
-  const [submitted, setSubmitted] = useState(false)
+  const [disabled, setDisabled] = useState(false)
+  const [btnText, setBtnText] = useState('Send message')
 
   const handleSubmit = async (e) => {
     e.preventDefault()
     console.log('Sending')
+    setDisabled(true)
     let data = {
         name,
         email,
         message
     }
-   /*const res = await fetch('/api/contact', {
+    setBtnText('Sending ...')
+   const res = await fetch('/api/contact', {
         method: 'POST',
         headers: {
-          'Accept': 'application/json, text/plain, **',
+          'Accept': 'application/json, text/plain, */*',
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(data)
       })
-    
+      
+      setBtnText('Send message')
         if (res.status === 200) {
           console.log('Response succeeded!')
-          setSubmitted(true)
+          alert('Your message has been delivered')
           setName('')
           setEmail('')
           setMessage('')
-        }*/
-        setName('')
-        setEmail('')
-        setMessage('')
+        }
+        setDisabled(false)
       
   }
   return (
@@ -80,7 +82,11 @@ export default function Contact() {
           value={message}
           onChange={(e)=>{setMessage(e.target.value)}}
        />
-    <Button type='submit' onClick={(e)=>{handleSubmit(e)}}> Send message</Button>
+    <Button 
+      disabled={disabled}
+      type='submit' 
+      onClick={(e)=>{handleSubmit(e)}}> {btnText}
+    </Button>
     </Box>
     <SectionDivider />
   </Section> 

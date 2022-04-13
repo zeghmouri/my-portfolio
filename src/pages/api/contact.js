@@ -1,5 +1,5 @@
    import Nodemailer from 'nodemailer'
-
+   require('dotenv').config()
    export default async (req, res) => {
    
    
@@ -7,8 +7,8 @@
        port: 465,
        host: "smtp.gmail.com",
        auth: {
-           user: 'portconform@gmail.com',
-           pass: 'portfolio1278',
+           user: process.env.email,
+           pass: process.env.password,
        },
        secure: true,});
    
@@ -28,7 +28,7 @@
    const mailData = {
     from: 'portconform@gmail.com',
     to: 'ma.zeghmouri@gmail.com',
-    subject: `Message From ${req.body.name}`,
+    subject: `Message From ${req.body.name} | ${req.body.email}`,
     text: req.body.message + " | Sent from: " + req.body.email,
     html: `<div>${req.body.message}</div><p>Sent from:
     ${req.body.email}</p>`
