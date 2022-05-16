@@ -21,23 +21,23 @@ const CustomTextField=styled(TextField)`
   
 
   & .MuiOutlinedInput-root {
-    color: white;
+    color: ${(props) => props.error ? '#d22e2f' : 'white'};;
     font-size:14px;
     font-family: ${props => props.theme.fonts.main};
     width:${(props) => props.message ? '207%' : '100%'};
     & fieldset {
-      border-color: white;
+      border-color: ${(props) => props.error ? '#d22e2f' : 'white'};;
     }
     &:hover fieldset {
-      border-color: white;
+      border-color: ${(props) => props.error ? '#d22e2f' : 'white'};;
     }
     &.Mui-focused fieldset {
-      border-color: white;
+      border-color: ${(props) => props.error ? '#d22e2f' : 'white'};;
     }
   }
  & .MuiFormHelperText-root{
-   color:white;
-   font-family: ${props => props.theme.fonts.main};
+  color: ${(props) => props.error ? '#d22e2f' : 'white'};;
+  font-family: ${props => props.theme.fonts.main};
    font-size: 10px;
  }
   & label.Mui-focused {
