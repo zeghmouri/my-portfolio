@@ -2,7 +2,7 @@ export const projects = [
   {
     title: 'Weezee Showcase website',
     description: "A showcase website for weezee android application. It has a beautiful, simple, fast, and responsive UI.",
-    image: '/images/weezee.jpg',
+    image: '/images/weezee.webp',
     tags: ['Html', 'Css', 'JavaScript', 'NextJs'],
     source: 'https://github.com/zeghmouri/weezee',
     visit: 'https://weezee1.vercel.app/',
@@ -11,7 +11,7 @@ export const projects = [
   {
     title: 'IT Talents WordPress Website',
     description: "A WordPress Website for a trainig school. It was developed in order to fit the client specifications",
-    image: '/images/ittswp.png',
+    image: '/images/ittswp.webp',
     tags: ['Html', 'Css', 'Php', 'WordPress'],
     source: 'https://github.com/zeghmouri',
     visit: 'https://mdfive.dz/ecole/',
