@@ -7,7 +7,7 @@ export const Skills = [
     slug: "react",
     Component: DiReact,
     title: "ReactJs",
-    Description: () => <> I use React library to implment the interface of my web projects</>,
+    Description: () => <> I use React library to implement the interfaces of my web projects.</>,
   },
   {
     slug: "wordpress",
@@ -19,7 +19,7 @@ export const Skills = [
     slug: "databases",
     Component: DiDatabase,
     title: "Databases",
-    Description: () => <>I have a solid knowledge in the manipulation of databases. I prefer using MySql and MongoDB.</>,
+    Description: () => <>I have a solid knowledge in the manipulation of databases. Especially MySql and MongoDB.</>,
   },
   {
     slug: "java",
