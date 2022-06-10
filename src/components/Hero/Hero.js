@@ -11,7 +11,7 @@ const Hero = (props) => (
           Hey there,
         </SectionTitle>
         <SectionText>
-          This is ZEGHMOURI Mohamed Amine. I am a Full Stack Web developer ...
+          This is ZEGHMOURI Mohamed Amine. I am a Full Stack Web developer, passionate about software development and the optimization of IT solutions, looking for new opportunities to enhance my skills. Highly motivated person with great autonomy and very passionate about new technologies.
         </SectionText>
         <Button onClick={(e) => {
           e.preventDefault();
