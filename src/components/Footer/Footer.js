@@ -24,16 +24,16 @@ const Footer = () => {
           <Slogan>&copy; {new Date().getFullYear()} <Link href="/">  ZEGHMOURI</Link> . All rights reserved.</Slogan>
         </CompanyContainer>
         <SocialContainer>
-          <SocialIcons href="https://github.com/zeghmouri">
+          <SocialIcons href="https://github.com/zeghmouri" target="_blank">
             <AiFillGithub size="3rem" />
           </SocialIcons>
-          <SocialIcons href="https://www.linkedin.com/in/ma-zeghmouri/">
+          <SocialIcons href="https://www.linkedin.com/in/ma-zeghmouri/" target="_blank">
             <AiFillLinkedin size="3rem" />
           </SocialIcons>
-          <SocialIcons href="https://www.facebook.com/ZeghmouriZaki/">
+          <SocialIcons href="https://www.facebook.com/ZeghmouriZaki/" target="_blank">
             <AiFillFacebook size="3rem" />
           </SocialIcons>
-          <SocialIcons href="https://www.twitter.com/ZeghmouriZaki">
+          <SocialIcons href="https://www.twitter.com/ZeghmouriZaki" target="_blank">
             <AiFillTwitterCircle size="3rem" />
           </SocialIcons>
         </SocialContainer>
