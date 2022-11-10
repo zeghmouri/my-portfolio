@@ -15,7 +15,16 @@ export const projects = [
     tags: ['Html', 'Css', 'Php', 'WordPress'],
     source: 'https://github.com/zeghmouri',
     visit: 'https://mdfive.dz/ecole/',
-    id: 0,
+    id: 1,
+  },
+  {
+    title: 'Componly Website',
+    description: "A showcase Website for Componly.co , It was developed to present Componly features and provide information such as pricing plans and also it offers a blog section for various ressources.",
+    image: '/images/componly.jpg',
+    tags: ['NextJs','Prismic.io'],
+    source: 'https://github.com/zeghmouri',
+    visit: 'https://componly.vercel.app',
+    id: 2,
   },
 
 ];
