@@ -49,8 +49,7 @@ export const SectionTitle = styled.h2`
   }
 `
 export const CustomAvatar = styled(Avatar)`
-  position: absolute;
-  @media ${props => props.theme.breakpoints.sm}{
+    @media ${props => props.theme.breakpoints.sm}{
     width : 50px;
     height : 50px;
   }

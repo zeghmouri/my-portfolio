@@ -1,5 +1,14 @@
 export const projects = [
   {
+    title: 'Componly Website',
+    description: "A showcase Website for Componly.co , It was developed to present Componly features and provide information such as pricing plans and also it offers a blog section for various ressources.",
+    image: '/images/componly.jpg',
+    tags: ['NextJs','Prismic.io'],
+    source: 'https://github.com/zeghmouri',
+    visit: 'https://componly.vercel.app',
+    id: 2,
+  },
+  {
     title: 'Weezee Showcase website',
     description: "A showcase website for weezee android application. It has a beautiful, simple, fast, and responsive UI.",
     image: '/images/weezee.webp',
@@ -9,6 +18,24 @@ export const projects = [
     id: 0,
   },
   {
+    title: 'Shukran Website',
+    description: "A showcase Website for Shukran application",
+    image: '/images/shukran.png',
+    tags: ['Gatsby', 'Prismic'],
+    source: 'https://github.com/zeghmouri',
+    visit: 'https://kpx-browser.vercel.app',
+    id: 3,
+  },
+  {
+    title: 'KPX Browser Website',
+    description: "A showcase Website for The Kpx Brpwser , It was developed to present the product features and provide information such as pricing plans.",
+    image: '/images/kpx.png',
+    tags: ['NextJs'],
+    source: 'https://github.com/zeghmouri',
+    visit: 'https://kpx-browser.vercel.app',
+    id: 3,
+  },
+  {
     title: 'IT Talents WordPress Website',
     description: "A WordPress Website for a trainig school. It was developed in order to fit the client specifications",
     image: '/images/ittswp.webp',
@@ -16,15 +43,6 @@ export const projects = [
     source: 'https://github.com/zeghmouri',
     visit: 'https://mdfive.dz/ecole/',
     id: 1,
-  },
-  {
-    title: 'Componly Website',
-    description: "A showcase Website for Componly.co , It was developed to present Componly features and provide information such as pricing plans and also it offers a blog section for various ressources.",
-    image: '/images/componly.jpg',
-    tags: ['NextJs','Prismic.io'],
-    source: 'https://github.com/zeghmouri',
-    visit: 'https://componly.vercel.app',
-    id: 2,
   },
 
 ];
