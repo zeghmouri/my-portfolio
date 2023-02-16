@@ -9,7 +9,17 @@ const TOTAL_CAROUSEL_COUNT = TimeLineData.length;
 export default function TimeLine() {
   const [activeItem, setActiveItem] = useState(0);
   const carouselRef = useRef();
-
+  
+  // snap back to beginning of scroll when window is resized
+  // avoids a bug where content is covered up if coming from smaller screen
+  useEffect(() => {
+    const handleResize = () => {
+      scroll(carouselRef.current, 0);
+    }
+  
+    window.addEventListener('resize', handleResize);
+  }, []);
+  
   const scroll = (node, left) => {
     return node.scrollTo({ left, behavior: 'smooth' });
   }
@@ -32,15 +42,6 @@ export default function TimeLine() {
     }
   }
 
-  // snap back to beginning of scroll when window is resized
-  // avoids a bug where content is covered up if coming from smaller screen
-  useEffect(() => {
-    const handleResize = () => {
-      scroll(carouselRef.current, 0);
-    }
-
-    window.addEventListener('resize', handleResize);
-  }, []);
 
   return (
     <Section id="about">

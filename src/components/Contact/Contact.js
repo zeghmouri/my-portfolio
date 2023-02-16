@@ -29,24 +29,26 @@ export default function Contact() {
   const [formValid, setFormValid]=useState(false)
   const [btnText, setBtnText] = useState('Send message')
 
+  useEffect(() => {
+      validateField("name");
+  }, [data.name]);
+  useEffect(() => {
+    validateField("email");
+  }, [data.email]);
+  useEffect(() => {
+  validateField("message");
+  }, [data.message]);
   
-
+  useEffect(()=>{
+    if(formErrors.name.isValid && formErrors.email.isValid && formErrors.message.isValid) {setFormValid(true)} else setFormValid(false);
+  },[formErrors])
+  
   const handleChange = (e) =>{
     
     let name = e.target.id;
     let value = e.target.value;
     setData({...data,[name]: value});
     }
-
-    useEffect(() => {
-        validateField("name");
-    }, [data.name]);
-    useEffect(() => {
-      validateField("email");
-    }, [data.email]);
-    useEffect(() => {
-    validateField("message");
-    }, [data.message]);
 
     function validateField(fieldName) {
     let valid
@@ -71,12 +73,7 @@ export default function Contact() {
           break;
       }
     }
-    useEffect(()=>{
-      if(formErrors.name.isValid && formErrors.email.isValid && formErrors.message.isValid) {setFormValid(true)} else setFormValid(false);
-    },[formErrors])
     
-
-  
   const handleSubmit = async (e) => {
     e.preventDefault()
     console.log('Sending')
@@ -152,7 +149,6 @@ export default function Contact() {
       <CustomTextField
           required
           error={data.message===""? false :!formErrors.message.isValid}
-          message
           id="message"
           label="Message"
           helperText= {data.message===""? "Please write you message" : formErrors.message.textError}
@@ -160,6 +156,7 @@ export default function Contact() {
           maxRows={4}
           value={data.message}
           onChange={handleChange}
+          message='message'
        />
     <Button 
       disabled={!formValid}
