@@ -1,7 +1,21 @@
 import React from 'react';
+import styled from 'styled-components';
+import { Avatar } from '@mui/material';
 
+export const CustomAvatar = styled(Avatar)`
+    position:absolute;
+    top:10%;
+    left:21%;
+    width:300px;
+    height:380px;
+    @media ${props => props.theme.breakpoints.sm}{
+    width : 50px;
+    height : 50px;
+  }
+
+`
 const BackgroundAnimation = () => (
-  <div>
+  <div style={{position:'relative'}}>
     <svg
       className="BgAnimation__svg"
       viewBox="0 0 602 602"
@@ -359,6 +373,7 @@ const BackgroundAnimation = () => (
         </linearGradient>
       </defs>
     </svg>
+    <CustomAvatar src='/images/mypic.jpg' variant='rounded'/> 
   </div>
 );
 

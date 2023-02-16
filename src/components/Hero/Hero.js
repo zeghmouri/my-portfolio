@@ -6,7 +6,6 @@ const Hero = (props) => (
   <>
     <Section row nopadding>
       <LeftSection>
-        <CustomAvatar alt="my-avatar" src="/images/mypic.webp" sx={{ width: 100, height: 100 }}/>
         <SectionTitle main center>
           Hey there,
         </SectionTitle>

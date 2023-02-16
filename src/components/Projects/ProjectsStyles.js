@@ -51,6 +51,7 @@ export const HeaderThree = styled.h3`
   color: #9cc9e3;
   padding: .5rem 0;
   margin-top: 1rem;
+  height:69px;
   font-size: ${(props) => props.title ? '3rem' : '2rem'};
 `;
 
