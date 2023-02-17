@@ -17,7 +17,7 @@ export default function TimeLine() {
       scroll(carouselRef.current, 0);
     }
   
-    window.addEventListener('resize', handleResize);
+    if(typeof window !== 'undefined') window.addEventListener('resize', handleResize);
   }, []);
   
   const scroll = (node, left) => {

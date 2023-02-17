@@ -16,10 +16,10 @@ const Home = () => {
         <BgAnimation />
       </Section>
       <Projects />
-      <Technologies />
+    <Technologies />
       <Timeline />
-      <Contact />
-      {/*<Acomplishments />*/}
+       {/* <Contact />
+      <Acomplishments />*/}
     </Layout>
   );
 };

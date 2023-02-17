@@ -14,7 +14,7 @@ const Hero = (props) => (
         </SectionText>
         <Button onClick={(e) => {
           e.preventDefault();
-          window.open('https://zeghmouri.vercel.app/files/Resume Mohamed Amine ZEGHMOURI.pdf', "_blank");
+          if(typeof window !== 'undefined') window.open('https://zeghmouri.vercel.app/files/Resume Mohamed Amine ZEGHMOURI.pdf', "_blank");
         }}>My Resume</Button>
       </LeftSection>
     </Section>
