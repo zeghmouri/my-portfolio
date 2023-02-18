@@ -16,29 +16,25 @@ export default function Header() {
     </Div1>
     <Div2>
       <li>
-        <Link href="#projects">
+        <Link legacyBehavior href="#projects">
           <NavLink>Projects</NavLink>
         </Link>
       </li>
       <li>
-        <Link href="#skills">
+        <Link legacyBehavior href="#skills">
           <NavLink>Skills</NavLink>
         </Link>
       </li>
       <li>
-        <Link href="#about">
+        <Link legacyBehavior href="#about">
           <NavLink>About</NavLink>
         </Link>
       </li>
       <li>
-        <a href="#contact">
-          <NavLink>Contact Me</NavLink>
-        </a>
+          <NavLink href="#contact">Contact Me</NavLink>
       </li>
       <li>
-        <a href="/blog">
-          <NavLink>Blog</NavLink>
-        </a>
+          <NavLink href="/blog">Blog</NavLink>
       </li>
     </Div2>
     <Div3>
