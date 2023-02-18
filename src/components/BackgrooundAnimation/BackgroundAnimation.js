@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Avatar } from '@mui/material';
 
 export const CustomAvatar = styled(Avatar)`
-    position:absolute;
+    position:absolute !important;
     top:10% !important;
     left:21% !important;
     width:300px !important;

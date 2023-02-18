@@ -117,7 +117,6 @@ export default function Contact() {
   return (
     <Section id="contact">
       <SectionTitle>Contact Me</SectionTitle>
-      <form>
       <Box
       component="form"
       sx={{
@@ -164,7 +163,6 @@ export default function Contact() {
       onClick={(e)=>{handleSubmit(e)}}> {btnText}
     </Button>
     </Box>
-    </form>
     <SectionDivider />
   </Section> 
   )
