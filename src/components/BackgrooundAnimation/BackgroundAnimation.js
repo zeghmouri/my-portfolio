@@ -4,13 +4,13 @@ import { Avatar } from '@mui/material';
 
 export const CustomAvatar = styled(Avatar)`
     position:absolute;
-    top:10%;
-    left:21%;
-    width:300px;
-    height:380px;
+    top:10% !important;
+    left:21% !important;
+    width:300px !important;
+    height:380px !important;
     @media ${props => props.theme.breakpoints.sm}{
-    width : 50px;
-    height : 50px;
+    width : 50px !important;
+    height : 50px !important;
   }
 
 `
