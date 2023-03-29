@@ -12,8 +12,8 @@ const Home = () => {
   return (
     <Layout>
       <Section grid>
-        <Hero />
         <BgAnimation />
+        <Hero />
       </Section>
       <Projects />
     <Technologies />

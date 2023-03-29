@@ -4,13 +4,15 @@ import { Avatar } from '@mui/material';
 
 export const CustomAvatar = styled(Avatar)`
     position:absolute !important;
-    top:10% !important;
-    left:21% !important;
+    top:20% !important;
+    left:25% !important;
     width:300px !important;
-    height:380px !important;
+    height:300px !important;
+    border-radius:10px !important;
     @media ${props => props.theme.breakpoints.sm}{
     width : 50px !important;
     height : 50px !important;
+
   }
 
 `
@@ -373,7 +375,7 @@ const BackgroundAnimation = () => (
         </linearGradient>
       </defs>
     </svg>
-    <CustomAvatar src='/images/mypic.jpg' variant='rounded'/> 
+    <CustomAvatar src='/images/mypic.jpg' /> 
   </div>
 );
 
