@@ -1,7 +1,7 @@
 export const projects = [
   {
     title: 'Componly Website',
-    description: "Componly.co landing website, It was developed to present Componly features and provide information such as pricing plans, Also it offers a blog section for various resources.",
+    description: "Componly.co landing website, It was developed to show Componly features and provide information about Componly SAAS such as pricing plans, Also the website offers a blog section for various resources which is dynamic and manageable from Prismic dashboard.",
     image: '/images/componly.jpg',
     tags: ['NextJs','Prismic.io','Airtable'],
     source: 'https://github.com/zeghmouri',
@@ -10,7 +10,7 @@ export const projects = [
   },
   {
     title: 'IT Talents WordPress Website',
-    description: "A WordPress Website for a trainig school. It was developed in order to fit the client specifications",
+    description: "A WordPress Website for a trainig school. It was developed in order to fit the client specifications and display the various services offered by the school, also to provide information about available trining sessions.",
     image: '/images/ittswp.webp',
     tags: ['Html', 'Css', 'Php', 'WordPress'],
     source: 'https://github.com/zeghmouri',
@@ -19,7 +19,7 @@ export const projects = [
   },
   {
     title: 'Shukran Website',
-    description: "Landing Website for Shukran mobile application, It presents the App's features and provides a blog section for different resources.",
+    description: "Landing Website for Shukran mobile application, It presents the App's features and provides a blog section for different resources and some delicious recipes.",
     image: '/images/shukran.png',
     tags: ['GatsbyJS', 'Prismic.io'],
     source: 'https://github.com/zeghmouri',
@@ -28,7 +28,7 @@ export const projects = [
   },
   {
     title: 'Weezee Showcase website',
-    description: "A showcase website for weezee android application. It has a beautiful, simple, fast, and responsive UI.",
+    description: "A showcase website for Weezee android application. It has a beautiful, simple, fast, and responsive UI.",
     image: '/images/weezee.webp',
     tags: ['NextJs'],
     source: 'https://github.com/zeghmouri',
