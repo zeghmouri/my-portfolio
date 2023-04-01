@@ -86,7 +86,7 @@ export const BoxText = styled.p`
 
 export const Join = styled.div`
   display: flex;
-  max-width: 1180px;
+  max-width: 1200px;
   justify-content: center;
   align-items: center;
   padding-bottom: 80px;
