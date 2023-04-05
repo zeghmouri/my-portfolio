@@ -15,6 +15,7 @@ const Technologies = () => (
         <ListItem key={Skill.slug}>
           <picture>
            {/*} <Skill.Component size="3rem" />*/}
+           {Skill.Component}
           </picture>
           <ListContainer>
             <ListTitle>{Skill.title}</ListTitle>
