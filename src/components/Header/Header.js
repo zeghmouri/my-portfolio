@@ -1,12 +1,26 @@
 import Link from 'next/link';
-import React from 'react';
-import { AiFillGithub, AiFillFacebook, AiFillLinkedin, AiFillTwitterCircle } from 'react-icons/ai';
-import { Container, Div1, Div2, Div3, NavLink, SocialIcons } from './HeaderStyles';
+import React, { useEffect, useState } from 'react';
+import { AiFillGithub, AiFillFacebook, AiFillLinkedin } from 'react-icons/ai';
+import {RxHamburgerMenu} from 'react-icons/rx'
+import {TfiClose} from 'react-icons/tfi'
+import { Container, Div1, Div2, Div3, Menu, NavLink, SocialIcons } from './HeaderStyles';
 
 
 export default function Header() {
+  const [menuOpen, setMenuOpen]= useState(false)
+  const [headerStyles, setHeaderStyles]= useState({height:'80px'})
+
+  useEffect(()=>{
+    if(menuOpen){
+      setHeaderStyles({height:'fit-content'})
+    }
+    else{
+      setHeaderStyles({height:'80px'})
+    }
+
+  },[menuOpen])
   return (
-    <Container>
+    <Container style={headerStyles}>
     <Div1>
       <Link legacyBehavior href="/">
         <a style={{ display: 'flex', alignItems: 'center', color: "white" }}>
@@ -47,9 +61,10 @@ export default function Header() {
       <SocialIcons href="https://www.facebook.com/ZeghmouriZaki/" target="_blank">
         <AiFillFacebook size="3rem" />
       </SocialIcons>
-      <SocialIcons href="https://www.twitter.com/ZeghmouriZaki"target="_blank">
-        <AiFillTwitterCircle size="3rem" />
-      </SocialIcons>
+      <Menu>
+        <RxHamburgerMenu onClick={() => setMenuOpen(true)} size="3rem" style={menuOpen? {display:'none'}:{}}/>
+        <TfiClose onClick={() => setMenuOpen(false)} size="3rem" style={menuOpen? {}:{display:'none'}}/>
+      </Menu>
     </Div3>
   </Container>
   )

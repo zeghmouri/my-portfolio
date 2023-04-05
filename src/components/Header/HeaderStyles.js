@@ -11,10 +11,10 @@ export const Container = styled.div`
 
   @media ${(props) => props.theme.breakpoints.sm} {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, 60px);
+    grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 0.5rem;
     grid-row-gap: 0.5rem;
+    overflow:hidden;
   }
 `;
 export const Div1 = styled.div`
@@ -22,9 +22,6 @@ export const Div1 = styled.div`
   display: flex;
   flex-direction: row;
   align-content: center;
-  @media ${(props) => props.theme.breakpoints.sm} {
-    grid-area: 1 / 1 / 2 / 3;
-  }
 `;
 export const Div2 = styled.div`
   grid-area: 1 / 2 / 2 / 4;
@@ -32,7 +29,8 @@ export const Div2 = styled.div`
   margin-top: 0.75em;
   justify-content: space-between;
   @media ${(props) => props.theme.breakpoints.sm} {
-    grid-area: 2 / 2 / 3 / 5;
+    grid-area: 2 / 1 / 3 / 5;
+    flex-direction:column;
   }
 `;
 export const Div3 = styled.div`
@@ -42,7 +40,7 @@ export const Div3 = styled.div`
   align-items: center;
   @media ${(props) => props.theme.breakpoints.sm} {
     align-items: center;
-    grid-area: 1 / 4 / 2 / 6;
+    gap:12px;
   }
 `;
 
@@ -63,53 +61,6 @@ export const NavLink = styled.a`
   }
 `;
 
-/// DropDown Contact
-export const ContactDropDown = styled.button`
-  border: none;
-  display: flex;
-  position: relative;
-  background: none;
-  font-size: 1.7rem;
-
-  line-height: 32px;
-  color: rgba(255, 255, 255, 0.75);
-  cursor: pointer;
-  transition: 0.3s ease;
-
-  &:focus {
-    outline: none;
-  }
-  &:hover {
-    color: #fff;
-  }
-
-  @media ${(props) => props.theme.breakpoints.sm} {
-    padding: 0.4rem 0;
-  }
-  @media ${(props) => props.theme.breakpoints.md} {
-    padding: 0;
-  }
-`;
-
-export const NavProductsIcon = styled(IoIosArrowDropdown)`
-  margin-left: 8px;
-  display: flex;
-  align-self: center;
-  transition: 0.3s ease;
-  opacity: ${({ isOpen }) => (isOpen ? '1' : '.75')};
-  transform: ${({ isOpen }) => (isOpen ? 'scaleY(-1)' : 'scaleY(1)')};
-
-  &:hover {
-    opacity: 1;
-  }
-
-  @media ${(props) => props.theme.breakpoints.sm} {
-    margin: 2px 0 0 2px;
-    width: 15px;
-  }
-`;
-
-
 // Social Icons 
 
 export const SocialIcons = styled.a`
@@ -123,4 +74,13 @@ border-radius: 50px;
     cursor: pointer;
     
   }
+`
+
+export const Menu = styled.div`
+  display:none;
+  color:#FFF;
+  @media ${(props) => props.theme.breakpoints.md} {
+    display:initial;
+  }
+  
 `
