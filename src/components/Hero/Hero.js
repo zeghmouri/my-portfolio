@@ -10,7 +10,7 @@ const Hero = (props) => (
           Hey there,
         </SectionTitle>
         <SectionText>
-          This is ZEGHMOURI Mohamed Amine. I am a Full Stack Web developer, passionate about software development and the optimization of IT solutions, looking for new opportunities to enhance my skills. Highly motivated person with great autonomy and very passionate about new technologies.
+          This is ZEGHMOURI Mohamed Amine. I am a computer science engineer and junior web developer, I am passionate about creating innovative, user-friendly web applications. With a strong foundation in software engineering and experience working with variety of frameworks, I am a quick learner who stays up-to-date with industry trends and best practices. I am eager to contribute my skills to a dynamic team and continue to grow as a software engineer.
         </SectionText>
         <Button onClick={(e) => {
           e.preventDefault();
