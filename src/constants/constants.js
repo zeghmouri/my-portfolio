@@ -41,7 +41,7 @@ export const projects = [
     image: '/images/kpx.png',
     tags: ['NextJs'],
     source: 'https://github.com/zeghmouri',
-    visit: 'https://kpx-browser.vercel.app',
+    visit: 'https://www.kpx.ai/',
     id: 3,
   },
 
