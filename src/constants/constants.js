@@ -54,6 +54,6 @@ export const TimeLineData = [
   { year: 2020, text: 'Started learning development with the MERN stack.', },
   { year: 2021, text: 'Started my carrer as a freelancer in web developement', },
   { year: 2022, text: 'Working on my final study project to get my Diploma.', },
-  { year: "25/09/2022", text: 'Graduated as a Computer Science Engineer.', },
+  { year: "09/2022", text: 'Graduated as a Computer Science Engineer.', },
   { year: "09/2023", text: "Embarking on a new educational adventure, Master 2 in Computer Engineering in UGA (Grenoble).", },
 ];
