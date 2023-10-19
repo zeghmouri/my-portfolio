@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Avatar } from '@mui/material';
 
-export const CustomAvatar = styled(Avatar)`
+const CustomAvatar = styled(Avatar)`
     position:absolute !important;
     top:20% !important;
     left:25% !important;
@@ -16,8 +16,11 @@ export const CustomAvatar = styled(Avatar)`
   }
 
 `
+const Animation = styled.div`
+  position:relative;
+`
 const BackgroundAnimation = () => (
-  <div style={{position:'relative'}}>
+  <Animation>
     <svg
       className="BgAnimation__svg"
       viewBox="0 0 602 602"
@@ -376,7 +379,7 @@ const BackgroundAnimation = () => (
       </defs>
     </svg>
     <CustomAvatar src='/images/mypic.jpg' /> 
-  </div>
+  </Animation>
 );
 
 export default BackgroundAnimation;
