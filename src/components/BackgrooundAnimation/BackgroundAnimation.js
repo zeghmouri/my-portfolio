@@ -12,6 +12,7 @@ const CustomAvatar = styled(Avatar)`
     @media ${props => props.theme.breakpoints.sm}{
     width : 50px !important;
     height : 50px !important;
+    top:2% !important;
 
   }
 
